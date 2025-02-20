@@ -1,0 +1,447 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Form Styles */
+.config-form {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.form-group input:focus {
+    border-color: #2196F3;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(33, 150, 243, 0.2);
+}
+
+/* Effects Panel */
+.effects-panel {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.add-effect {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.add-effect select {
+    flex-grow: 1;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.effects-chain {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.effect-controls {
+    background-color: #f8f9fa;
+    border-radius: 6px;
+    padding: 15px;
+    position: relative;
+}
+
+.effect-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.effect-header h4 {
+    margin: 0;
+    color: #333;
+}
+
+.remove-effect-btn {
+    background: none;
+    border: none;
+    color: #dc3545;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 0 5px;
+}
+
+.remove-effect-btn:hover {
+    color: #bd2130;
+}
+
+.slider-container {
+    margin: 10px 0;
+}
+
+.slider-container label {
+    display: block;
+    margin-bottom: 5px;
+    color: #666;
+    font-size: 12px;
+    text-transform: capitalize;
+}
+
+.slider-container input[type="range"] {
+    width: 100%;
+    margin: 5px 0;
+}
+
+.slider-container span {
+    font-size: 12px;
+    color: #666;
+    margin-left: 10px;
+}
+
+.preset-select {
+    width: 100%;
+    padding: 6px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* Effect Parameter Controls */
+.parameter-group {
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+}
+
+.parameter-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.parameter-value {
+    font-size: 12px;
+    color: #666;
+    min-width: 40px;
+    text-align: right;
+}
+
+/* Effect Chain Visualization */
+.effect-chain-flow {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+    overflow-x: auto;
+    padding: 10px 0;
+}
+
+.effect-node {
+    padding: 8px 15px;
+    background-color: #e3f2fd;
+    border-radius: 4px;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.effect-arrow {
+    margin: 0 10px;
+    color: #666;
+}
+
+/* Preset Management */
+.preset-management {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.preset-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.preset-save-btn {
+    background-color: #28a745;
+    color: white;
+}
+
+.preset-save-btn:hover {
+    background-color: #218838;
+}
+
+.preset-load-btn {
+    background-color: #17a2b8;
+    color: white;
+}
+
+.preset-load-btn:hover {
+    background-color: #138496;
+}
+
+/* Recording Controls */
+.recording-controls {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Buttons */
+button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-right: 8px;
+    transition: background-color 0.2s;
+}
+
+.submit-btn {
+    background-color: #2196F3;
+    color: white;
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.submit-btn:hover {
+    background-color: #1976D2;
+}
+
+.play-btn {
+    background-color: #4CAF50;
+    color: white;
+    min-width: 36px;
+}
+
+.play-btn:hover {
+    background-color: #43A047;
+}
+
+.delete-btn {
+    background-color: #f44336;
+    color: white;
+    min-width: 36px;
+}
+
+.delete-btn:hover {
+    background-color: #E53935;
+}
+
+#addEffectBtn {
+    background-color: #673ab7;
+    color: white;
+}
+
+#addEffectBtn:hover {
+    background-color: #5E35B1;
+}
+
+.secondary-btn {
+    background-color: #757575;
+    color: white;
+    margin-top: 10px;
+}
+
+.secondary-btn:hover {
+    background-color: #616161;
+}
+
+button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+/* Status Messages */
+.status {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.upload-success {
+    background-color: #dff0d8;
+    color: #3c763d;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.upload-error {
+    background-color: #f2dede;
+    color: #a94442;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+/* Processing Status */
+.processing-status {
+    margin-top: 10px;
+    padding: 8px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.processing-status.active {
+    background-color: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeeba;
+}
+
+.processing-status.complete {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.processing-status.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Recordings List */
+.recordings-list {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.recordings-list h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #333;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+.recording-item {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.2s;
+}
+
+.recording-item:hover {
+    background-color: #f8f9fa;
+}
+
+.recording-item:last-child {
+    border-bottom: none;
+}
+
+.recording-item span {
+    flex-grow: 1;
+    margin-left: 10px;
+    color: #555;
+}
+
+/* Audio Player */
+audio {
+    width: 100%;
+    margin: 10px 0;
+    border-radius: 20px;
+}
+
+/* Debug Panel */
+#debug {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 12px;
+}
+
+#debugInfo {
+    margin: 0;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+/* Utility Classes */
+.hidden {
+    display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+
+    .recording-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .recording-item button {
+        margin-bottom: 5px;
+    }
+
+    .recording-item span {
+        margin-top: 5px;
+    }
+
+    .effect-chain-flow {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .effect-arrow {
+        transform: rotate(90deg);
+        margin: 5px 0;
+    }
+
+    .add-effect {
+        flex-direction: column;
+    }
+
+    .parameter-group {
+        padding: 8px;
+    }
+
+    .preset-actions {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+        margin: 5px 0;
+    }
+}

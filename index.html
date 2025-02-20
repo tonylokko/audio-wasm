@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Audio Recorder & Effects Processor</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/aws-sdk@2.1046.0/dist/aws-sdk.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div id="credentialsForm">
+            <h2>Storage Configuration</h2>
+            <form id="s3Config" class="config-form">
+                <div class="form-group">
+                    <label for="endpoint">Endpoint:</label>
+                    <input type="url" id="endpoint" placeholder="https://your-endpoint" required>
+                </div>
+                <div class="form-group">
+                    <label for="accessKey">Access Key:</label>
+                    <input type="text" id="accessKey" required>
+                </div>
+                <div class="form-group">
+                    <label for="secretKey">Secret Key:</label>
+                    <input type="password" id="secretKey" required>
+                </div>
+                <div class="form-group">
+                    <label for="bucket">Bucket:</label>
+                    <input type="text" id="bucket" required>
+                </div>
+                <button type="submit" class="submit-btn">Save Configuration</button>
+            </form>
+        </div>
+
+        <div id="recorder" style="display: none;">
+            <div class="recording-controls">
+                <button id="startButton">Start Recording</button>
+                <button id="stopButton" disabled>Stop Recording</button>
+                <div id="recordingStatus" class="status"></div>
+                <audio id="player" controls></audio>
+                <div id="uploadStatus"></div>
+            </div>
+
+            <div class="effects-panel">
+                <h3>Audio Effects</h3>
+                <div class="add-effect">
+                    <select id="addEffect">
+                        <option value="">Select an effect...</option>
+                    </select>
+                    <button id="addEffectBtn">Add Effect</button>
+                </div>
+                <div id="effectsChain" class="effects-chain"></div>
+            </div>
+
+            <div id="recordingsList" class="recordings-list">
+                <h3>Recordings</h3>
+                <div id="recordingsContainer"></div>
+            </div>
+
+            <button id="refreshList" class="secondary-btn">Refresh List</button>
+            <button id="changeConfig" class="secondary-btn">Change Configuration</button>
+        </div>
+
+        <div id="debug">
+            <h3>Debug Information</h3>
+            <pre id="debugInfo"></pre>
+        </div>
+    </div>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>

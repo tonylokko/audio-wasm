@@ -1,0 +1,15 @@
+{
+  "name": "audio-transcriber",
+  "type": "module",
+  "version": "0.1.0",
+  "files": [
+    "audio_transcriber_bg.wasm",
+    "audio_transcriber.js",
+    "audio_transcriber.d.ts"
+  ],
+  "main": "audio_transcriber.js",
+  "types": "audio_transcriber.d.ts",
+  "sideEffects": [
+    "./snippets/*"
+  ]
+}
